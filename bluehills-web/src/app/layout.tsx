@@ -13,8 +13,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Artificial Intelligence Expert | Bluehills AI",
-  description: "Experience your AI journey with us",
+  title: "BlueHills AI - AI Solutions",
+  description: "BlueHills AI provides cutting-edge AI solutions for businesses.",
+  openGraph: {
+    title: "BlueHills AI - AI Solutions",
+    description: "BlueHills AI provides cutting-edge AI solutions for businesses.",
+    url: "https://bluehillsai.com",
+    siteName: "BlueHills AI",
+    images: [
+      {
+        url: "https://bluehillsai.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BlueHills AI",
+      },
+    ],
+    type: "website",
+  },
   icons: "/favicon.ico", // ✅ Correct path
 };
 
