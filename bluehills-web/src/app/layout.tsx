@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Artificial Intelligence Expert | Bluehills AI",
   description: "Experience your AI journey with us",
+  icons: "/favicon.ico", // ✅ Correct path
 };
 
 export default function RootLayout({
