@@ -2,7 +2,7 @@ import { Twitter } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
-export default function Footer() {
+export function Footer() {
   return (
     <div>
          <footer className="bg-blue-950 py-12 px-4">

@@ -1,27 +1,29 @@
-// app/case-studies/page.tsx
-import Footer from "@/components/Footer";
-import { Navbar } from "@/components/Navbar";
-import CaseStudyBox from "@/components/CaseStudyBox";
+import { getAllCaseStudies } from "@/components/lib/getCaseStudies";
 
-const caseStudies = [
-  { slug: "ai-automation", title: "AI Automation in Healthcare", imageUrl: "https://source.unsplash.com/random/800x600/?healthcare,technology" },
-  { slug: "ml-predictive", title: "Machine Learning for Predictive Analytics", imageUrl: "https://source.unsplash.com/random/800x600/?machinelearning,data" },
-  { slug: "cyber-security", title: "Advancements in Cyber Security", imageUrl: "https://source.unsplash.com/random/800x600/?cybersecurity" },
-  { slug: "blockchain-finance", title: "Blockchain Transformations in Finance", imageUrl: "https://source.unsplash.com/random/800x600/?blockchain,finance" },
-  { slug: "iot-smart-cities", title: "IoT Applications in Smart Cities", imageUrl: "https://source.unsplash.com/random/800x600/?iot,smartcity" },
-];
+import Link from "next/link";
+import {Navbar} from "@/components/Navbar";
+import {Footer} from "@/components/Footer";
 
-export default function CaseStudiesPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-950 via-blue-900 to-blue-600 text-white">
-      <Navbar />
-      <h1 className="text-2xl font-bold">Case Studies</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-        {caseStudies.map((study) => (
-          <CaseStudyBox key={study.slug} slug={study.slug} title={study.title} imageUrl={study.imageUrl} />
-        ))}
-      </div>
-      <Footer />
-    </div>
-  );
+export default function CaseStudyList() {
+    const caseStudies = getAllCaseStudies();
+
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-blue-950 via-blue-900 to-blue-600 text-white">
+            <Navbar />
+            <main className="max-w-4xl mx-auto py-12">
+                <h1 className="text-4xl font-bold mb-6 text-center">Case Studies</h1>
+                <div className="space-y-6">
+                    {caseStudies.map((study) => (
+                        <Link key={study.slug} href={`/case-studies/${study.slug}`}>
+                            <div className="p-6 bg-blue-800 hover:bg-blue-700 transition rounded-lg">
+                                <h2 className="text-2xl font-semibold">{study.title}</h2>
+                                <p className="text-gray-300">{study.description}</p>
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+            </main>
+            <Footer/>
+        </div>
+    );
 }
