@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true, // Enables React strict mode
   images: {
-    domains: ['images.unsplash.com', 'res.cloudinary.com'], // Allowed external images
+    domains: ['images.unsplash.com', 'res.cloudinary.com', 'source.unsplash.com'], // Allowed external images
   },experimental: {
     turbo: {}, // ✅ Use an empty object instead of 'true'
   },
