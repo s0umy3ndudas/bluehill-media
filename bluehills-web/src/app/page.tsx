@@ -12,25 +12,17 @@ import {
   MapPin
 } from 'lucide-react';
 import Image from 'next/image';
-<<<<<<< HEAD
- import { Navbar } from '@/components/Navbar';
+  import { Navbar } from '@/components/Navbar';
 import {Footer} from '@/components/Footer';
-=======
-import { Navbar } from '@/components/Navbar';
-import {Footer} from '@/components/Footer';
-  
->>>>>>> 5c4a0aa (added blogs)
-
+    
+ 
 export default function Home() {
   return (
 <div className="min-h-screen bg-gradient-to-br from-blue-950 via-blue-900 to-blue-600 text-white">
 {/* Header/Navigation */}
      <Navbar/>
-<<<<<<< HEAD
-
-=======
  
->>>>>>> 5c4a0aa (added blogs)
+ 
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -322,12 +314,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <Footer/>
-<<<<<<< HEAD
-    </div>
-=======
-     </div>
->>>>>>> 5c4a0aa (added blogs)
+      <Footer/> 
+      </div>  
   );
 }
 
