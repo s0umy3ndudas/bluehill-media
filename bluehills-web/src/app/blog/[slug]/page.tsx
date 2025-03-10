@@ -10,6 +10,7 @@ import { BwNavbar } from "@/components/BwNavbar";
 import { BwFooter } from "@/components/BwFooter";
 import { TableOfContents } from "@/components/TableOfContents";
 import { extractHeadings } from "@/components/utils/blog";
+import Head from "next/head";
 
 const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
 
@@ -152,6 +153,35 @@ export default async function PostPage({
   const categories = post.categories?.map((cat: any) => cat.title).join(", ") || "Uncategorized";
 
   return (
+    <>
+         <Head>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How do I optimize a blog for SEO?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To optimize a blog for SEO, use keyword research, optimize meta descriptions, improve page speed, and acquire backlinks."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the best tools for SEO optimization?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Some of the best SEO tools include Ahrefs, SEMrush, Google Search Console, and Yoast SEO."
+                }
+              }
+            ]
+          })}
+        </script>
+      </Head> 
+      
+     
     <main className="min-h-screen bg-gray-50">
       {/* Fixed Navbar */}
       <div className="w-full bg-white shadow-md fixed top-0 left-0 right-0 z-50">
@@ -292,5 +322,8 @@ export default async function PostPage({
       {/* Footer */}
       <BwFooter />
     </main>
+
+
+    </>
   );
 }
