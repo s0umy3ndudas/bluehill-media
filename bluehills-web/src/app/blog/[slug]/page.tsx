@@ -164,7 +164,7 @@ export default async function PostPage({
       <div className="pt-16"></div>
 
       {/* Hero Section */}
-      <header className="w-full bg-gradient-to-r from-blue-900 to-indigo-800 text-white py-20 text-center relative overflow-hidden">
+      <header className="w-full bg-gradient-to-r from-blue-600 to-blue-400 text-white py-20 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-5xl font-bold mb-4 leading-tight">{post.title}</h1>
