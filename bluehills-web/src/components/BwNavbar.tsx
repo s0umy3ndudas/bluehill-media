@@ -34,7 +34,7 @@ export function BwNavbar() {
             <Twitter className="h-5 w-5" />
           </Link>
           <Link 
-            href="#contact" 
+            href="https://quv2iqfzf5r.typeform.com/to/CvRGdRVz"  target='_blank'
             className="bg-yellow-600 text-white px-4 py-2 rounded-md hover:bg-yellow-800 transition-colors animate-pulse"
           >
             Book a demo
@@ -44,7 +44,7 @@ export function BwNavbar() {
         {/* Mobile View: Hamburger + Book a Demo */}
         <div className="md:hidden flex items-center space-x-4">
           <Link 
-            href="#contact" 
+            href="https://quv2iqfzf5r.typeform.com/to/CvRGdRVz"  target='_blank'
             className="bg-yellow-600 text-white px-4 py-2  rounded-md hover:bg-yellow-800  transition-colors animate-pulse text-sm"
           >
             Book a demo

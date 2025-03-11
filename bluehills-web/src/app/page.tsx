@@ -7,13 +7,12 @@ import {
   Code, 
   MessageSquare, 
   ArrowRight,
-  Mail,
-  Phone,
-  MapPin
+  
 } from 'lucide-react';
 import Image from 'next/image';
   import { Navbar } from '@/components/Navbar';
 import {Footer} from '@/components/Footer';
+import Link from 'next/link';
     
  
 export default function Home() {
@@ -36,9 +35,9 @@ export default function Home() {
                 increase efficiency, and drive growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="#contact" className="bg-white text-blue-900 font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-flex items-center justify-center">
+                <Link href="https://quv2iqfzf5r.typeform.com/to/CvRGdRVz" target='_blank' className="bg-white text-blue-900 font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-flex items-center justify-center">
                   Get Started <ChevronRight className="ml-2 h-5 w-5" />
-                </a>
+                </Link>
                 <a href="#case-studies" className="border border-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors inline-flex items-center justify-center">
                   View Case Studies
                 </a>
@@ -212,14 +211,16 @@ export default function Home() {
           </div>
           
           <div className="text-center mt-12">
-            <a href="#" className="border border-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors inline-flex items-center justify-center">
-              View All Articles
-            </a>
+            <Link  href="/blog" className="border border-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors inline-flex items-center justify-center">
+             <p>  View All Articles </p>
+            </Link>
+
+ 
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact Section
       <section id="contact" className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="bg-blue-900/70 rounded-2xl p-8 md:p-12">
@@ -311,7 +312,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <Footer/> 

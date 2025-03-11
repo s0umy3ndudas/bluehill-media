@@ -278,7 +278,7 @@ export default async function PostPage({
             )}
             
             {/* Share buttons */}
-            <div className="mt-12 pt-6 border-t border-gray-200">
+            {/* <div className="mt-12 pt-6 border-t border-gray-200">
               <h3 className="text-lg font-semibold text-gray-800 mb-4">Share this post</h3>
               <div className="flex space-x-4">
                 <button className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition">
@@ -297,7 +297,11 @@ export default async function PostPage({
                   </svg>
                 </button>
               </div>
-            </div>
+            </div> */}
+
+
+
+
           </div>
           
           {/* Table of Contents Sidebar - 1/3 width */}
