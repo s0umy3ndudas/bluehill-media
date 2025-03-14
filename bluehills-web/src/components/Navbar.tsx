@@ -38,20 +38,20 @@ export function Navbar() {
           </Link>
 
           <Link 
-            href="https://quv2iqfzf5r.typeform.com/to/CvRGdRVz" target='_blank'
+            href="/sales"  
             className="bg-yellow-500 text-black px-4 py-2 rounded-md hover:bg-yellow-700 transition-colors animate-pulse"
           >
-            Book a demo
+            Contact sales
           </Link>
         </nav>
         
         {/* Mobile View: Hamburger + Book a Demo */}
         <div className="md:hidden flex items-center space-x-4">
           <Link 
-            href="https://quv2iqfzf5r.typeform.com/to/CvRGdRVz"  target='_blank'
+            href="/sales"   
             className="bg-yellow-500 text-black px-4 py-2 rounded-md  hover:bg-yellow-700  transition-colors animate-pulse text-sm"
           >
-            Book a demo
+            Contact sales
           </Link>
           <button 
             className="text-white"
