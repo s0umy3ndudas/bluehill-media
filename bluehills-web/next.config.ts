@@ -6,7 +6,7 @@ const withMDX = require('@next/mdx')({
 const nextConfig = withMDX({
   reactStrictMode: true, // Enables React strict mode
   images: {
-    domains: ['images.unsplash.com', 'res.cloudinary.com', 'source.unsplash.com'], // Allowed external images
+    domains: ['images.unsplash.com', 'res.cloudinary.com', 'source.unsplash.com', 'cdn.sanity.io',  'bluehillsai.com' ], // Allowed external images
   },
   experimental: {
     turbo: {}, // ✅ Correct Turbo Mode Configuration
