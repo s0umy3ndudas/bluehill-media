@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { 
    ChevronRight, 
@@ -13,9 +14,24 @@ import Image from 'next/image';
   import { Navbar } from '@/components/Navbar';
 import {Footer} from '@/components/Footer';
 import Link from 'next/link';
-    
+ import { client } from "@/sanity/client";
+import BlogSection from '@/components/BlogSection';
+
  
-export default function Home() {
+const POSTS_QUERY = `*[
+  _type == "post" && defined(slug.current)
+] | order(publishedAt desc)[0...3] {
+  _id,
+  title,
+  slug,
+  publishedAt,
+  image
+}`;
+
+export default async function Home() {
+
+  const posts = await client.fetch(POSTS_QUERY); // Fetch posts from Sanity
+
   return (
 <div className="min-h-screen bg-gradient-to-br from-blue-950 via-blue-900 to-blue-600 text-white">
 {/* Header/Navigation */}
@@ -35,7 +51,7 @@ export default function Home() {
                 increase efficiency, and drive growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="https://quv2iqfzf5r.typeform.com/to/CvRGdRVz" target='_blank' className="bg-white text-blue-900 font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-flex items-center justify-center">
+                <Link href="/sales"   className="bg-white text-blue-900 font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-flex items-center justify-center">
                   Get Started <ChevronRight className="ml-2 h-5 w-5" />
                 </Link>
                 <a href="#case-studies" className="border border-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors inline-flex items-center justify-center">
@@ -157,69 +173,9 @@ export default function Home() {
       </section>
 
       {/* Blog Section */}
-      <section id="blog" className="py-20 px-4 bg-blue-800/50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Latest Insights</h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Stay updated with the latest trends and insights in AI automation.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "The Future of AI in Business Automation",
-                date: "May 15, 2025",
-                excerpt: "Explore how emerging AI technologies are reshaping business operations across industries.",
-                image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000&auto=format&fit=crop"
-              },
-              {
-                title: "Implementing Machine Learning for Predictive Analytics",
-                date: "May 8, 2025",
-                excerpt: "Learn how predictive analytics can help your business anticipate market trends and customer behavior.",
-                image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1000&auto=format&fit=crop"
-              },
-              {
-                title: "Ethical Considerations in AI Automation",
-                date: "April 29, 2025",
-                excerpt: "Understanding the ethical implications of AI implementation and how to address them responsibly.",
-                image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1000&auto=format&fit=crop"
-              }
-            ].map((post, index) => (
-              <div key={index} className="bg-blue-900/50 rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
-   <div className="relative h-48 overflow-hidden">
-  <Image 
-    src={post.image} 
-    alt={post.title} 
-    fill 
-    className="object-cover"
-  />
-</div>
-
-
-                <div className="p-6">
-                  <div className="text-blue-300 text-sm mb-2">{post.date}</div>
-                  <h3 className="text-xl font-bold mb-3">{post.title}</h3>
-                  <p className="text-blue-100 mb-4">{post.excerpt}</p>
-                  <a href="#" className="inline-flex items-center text-blue-300 hover:text-white">
-                    Read More <ArrowRight className="ml-2 h-4 w-4" />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <Link  href="/blog" className="border border-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors inline-flex items-center justify-center">
-             <p>  View All Articles </p>
-            </Link>
+      <BlogSection posts={posts} />
 
  
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section
       <section id="contact" className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">

@@ -33,9 +33,9 @@ export function Navbar() {
           <Link href="#how-it-works" className="hover:text-blue-300 transition-colors">How It Works</Link>
           <Link href="/blog" className="hover:text-blue-300 transition-colors">Blog</Link>
           
-          <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300 transition-colors">
+          {/* <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300 transition-colors">
             <Twitter className="h-5 w-5" />
-          </Link>
+          </Link> */}
 
           <Link 
             href="/sales"  
@@ -82,15 +82,15 @@ export function Navbar() {
           <Link href="#how-it-works" className="text-white hover:text-blue-300 transition-colors">How It Works</Link>
           <Link href="/blog" className="text-white hover:text-blue-300 transition-colors">Blog</Link>
           
-          <Link 
-            href="https://twitter.com" 
+          {/* <Link 
+            href="https://twitter.com/bluehillsai" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-white hover:text-blue-300 transition-colors flex items-center space-x-2"
           >
             <Twitter className="h-5 w-5" />
             <span>Twitter</span>
-          </Link>
+          </Link> */}
         </nav>
       )}
     </header>

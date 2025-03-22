@@ -1,6 +1,6 @@
 'use client'
 
-import { Twitter } from 'lucide-react'
+// import { Twitter } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
@@ -30,9 +30,9 @@ export function BwNavbar() {
           <Link href="#how-it-works" className="text-gray-700 hover:text-black transition-colors">How It Works</Link>
           <Link href="/blog" className="text-gray-700 hover:text-black transition-colors">Blog</Link>
          
-          <Link href="https://twitter.com"   rel="noopener noreferrer" className="text-gray-700 hover:text-black transition-colors">
+          {/* <Link href="https://twitter.com"   rel="noopener noreferrer" className="text-gray-700 hover:text-black transition-colors">
             <Twitter className="h-5 w-5" />
-          </Link>
+          </Link> */}
           <Link 
             href="/sales"  
             className="bg-yellow-600 text-white px-4 py-2 rounded-md hover:bg-yellow-800 transition-colors animate-pulse"
@@ -78,7 +78,7 @@ export function BwNavbar() {
           <Link href="#how-it-works" className="text-black hover:text-gray-700 transition-colors">How It Works</Link>
           <Link href="/blog" className="text-black hover:text-gray-700 transition-colors">Blog</Link>
        
-          <Link 
+          {/* <Link 
             href="https://twitter.com" 
             target="_blank" 
             rel="noopener noreferrer" 
@@ -86,7 +86,7 @@ export function BwNavbar() {
           >
             <Twitter className="h-5 w-5" />
             <span>Twitter</span>
-          </Link>
+          </Link> */}
         </nav>
       )}
     </header>
