@@ -15,12 +15,18 @@ export function Navbar() {
           <span className="text-2xl font-bold bg-gradient-to-r from-blue-200 to-white bg-clip-text text-transparent">
             
           <Link href="https://bluehillsai.com"  rel="noopener noreferrer" className="text-gray-700 hover:text-black transition-colors">
-          <Image 
-              src='https://res.cloudinary.com/dsccaob3y/image/upload/v1740783097/brand/zan0kxq7i3cllfvnooxe.png' 
+        
+
+<Image 
+              src='https://res.cloudinary.com/dsccaob3y/image/upload/v1743604755/brand/d7gcctsyl75pughx0ahh.png' 
+             
+     
               height={100} 
               width={100} 
               alt='Brand Logo'
             />
+
+
           </Link>
 
            

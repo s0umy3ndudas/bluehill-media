@@ -15,7 +15,7 @@ export function BwNavbar() {
           <span className="text-2xl font-bold bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent">
           <Link href="https://bluehillsai.com"  rel="noopener noreferrer" className="text-gray-700 hover:text-black transition-colors">
           <Image 
-              src='https://res.cloudinary.com/dsccaob3y/image/upload/v1740783336/brand/qukbivhb03drx68x5wh8.png' 
+              src='https://res.cloudinary.com/dsccaob3y/image/upload/v1743604928/brand/rx79b0grt9v1qc7yadxh.png' 
               height={100} 
               width={100} 
               alt='Brand Logo'
