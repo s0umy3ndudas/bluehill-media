@@ -150,7 +150,7 @@ export default async function PostPage({
   const author = post.author?.name || "Som Das";
   
   // Extract categories if available
-  const categories = post.categories?.map((cat: any) => cat.title).join(", ") || "Uncategorized";
+  // const categories = post.categories?.map((cat: any) => cat.title).join(", ") || "Uncategorized";
 
   return (
     <>
