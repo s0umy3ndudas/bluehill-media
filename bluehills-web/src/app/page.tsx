@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
  import React from 'react';
 import { 
    ChevronRight, 
@@ -5,17 +6,20 @@ import {
   Zap, 
   Users, 
   Code, 
-  MessageSquare, 
-  ArrowRight,
+ 
   
 } from 'lucide-react';
-import Image from 'next/image';
+// import Image from 'next/image';
   import { Navbar } from '@/components/Navbar';
 import {Footer} from '@/components/Footer';
 import Link from 'next/link';
  import { client } from "@/sanity/client";
 import BlogSection from '@/components/BlogSection';
 
+ 
+import fs from 'fs/promises';
+import path from 'path';
+import FloatingVideo from '@/components/FloatingVideo';
  
 const POSTS_QUERY = `*[
   _type == "post" && defined(slug.current)
@@ -27,12 +31,44 @@ const POSTS_QUERY = `*[
   image
 }`;
 
-export default async function Home() {
+const CACHE_DIR = path.resolve('./cache');
+const CACHE_FILE = path.join(CACHE_DIR, 'posts.json');
 
-  const posts = await client.fetch(POSTS_QUERY); // Fetch posts from Sanity
+// ⏱️ 1 day in ms. For now, we'll force it to re-fetch always for testing.
+const CACHE_DURATION = 1000 *24 *60;
+
+export default async function Home() {
+  let posts;
+
+  try {
+    const cache = JSON.parse(await fs.readFile(CACHE_FILE, 'utf8'));
+    const now = Date.now();
+
+    // Always expired for now (for testing)
+    if (now - cache.timestamp < CACHE_DURATION) {
+      console.log('✅ Using cached posts');
+      posts = cache.data;
+    } else {
+      throw new Error('Cache expired or disabled');
+    }
+  } catch (err) {
+    console.log('♻️ Fetching posts from Sanity...');
+    posts = await client.fetch(POSTS_QUERY);
+
+    await fs.mkdir(CACHE_DIR, { recursive: true });
+
+    await fs.writeFile(CACHE_FILE, JSON.stringify({
+      timestamp: Date.now(),
+      data: posts
+    }));
+
+    console.log('📝 Cache written to posts.json');
+  }
 
   return (
 <div className="min-h-screen bg-gradient-to-br from-blue-950 via-blue-900 to-blue-600 text-white">
+<FloatingVideo />
+
 {/* Header/Navigation */}
      <Navbar/>
  
@@ -53,9 +89,9 @@ export default async function Home() {
                 <Link href="/sales"   className="bg-white text-blue-900 font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-flex items-center justify-center">
                   Get Started <ChevronRight className="ml-2 h-5 w-5" />
                 </Link>
-                <a href="#case-studies" className="border border-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors inline-flex items-center justify-center">
+                {/* <Link href="#case-studies" className="border border-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors inline-flex items-center justify-center">
                   View Case Studies
-                </a>
+                </Link> */}
               </div>
             </div>
             <div className="md:w-1/2">
@@ -70,7 +106,7 @@ export default async function Home() {
       </section>
 
       {/* Case Studies Section */}
-      <section id="case-studies" className="py-20 px-4 bg-blue-800/50">
+      {/* <section id="case-studies" className="py-20 px-4 bg-blue-800/50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-4">Case Studies</h2>
@@ -123,7 +159,7 @@ export default async function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* How It Works Section */}
       <section id="how-it-works" className="py-20 px-4">
