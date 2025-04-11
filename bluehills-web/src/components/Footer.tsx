@@ -77,7 +77,7 @@ export function Footer() {
               <h3 className="text-lg font-semibold mb-4">Resources</h3>
               <ul className="space-y-2">
                 <li><a href="#" className="text-blue-200 hover:text-white transition-colors">AI Trends</a></li>
-                <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Case Studies</a></li>
+                {/* <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Case Studies</a></li> */}
                 <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Guides & Ebooks</a></li>
                 <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Webinars & Events</a></li>
                 <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Help Center</a></li>

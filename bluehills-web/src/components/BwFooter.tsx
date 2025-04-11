@@ -75,7 +75,7 @@ export function BwFooter() {
               <h3 className="text-lg font-semibold mb-4">Resources</h3>
               <ul className="space-y-2">
                 <li><a href="#" className="hover:text-gray-700 transition-colors">AI Trends</a></li>
-                <li><a href="#" className="hover:text-gray-700 transition-colors">Case Studies</a></li>
+                {/* <li><a href="#" className="hover:text-gray-700 transition-colors">Case Studies</a></li> */}
                 <li><a href="#" className="hover:text-gray-700 transition-colors">Guides & Ebooks</a></li>
                 <li><a href="#" className="hover:text-gray-700 transition-colors">Webinars & Events</a></li>
                 <li><a href="#" className="hover:text-gray-700 transition-colors">Help Center</a></li>

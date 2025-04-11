@@ -26,7 +26,7 @@ export function BwNavbar() {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="#case-studies" className="text-gray-700 hover:text-black transition-colors">Case Studies</Link>
+          {/* <Link href="#case-studies" className="text-gray-700 hover:text-black transition-colors">Case Studies</Link> */}
           <Link href="#how-it-works" className="text-gray-700 hover:text-black transition-colors">How It Works</Link>
           <Link href="/blog" className="text-gray-700 hover:text-black transition-colors">Blog</Link>
          

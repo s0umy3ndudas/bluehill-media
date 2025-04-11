@@ -35,7 +35,7 @@ export function Navbar() {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="#case-studies" className="hover:text-blue-300 transition-colors">Case Studies</Link>
+          {/* <Link href="#case-studies" className="hover:text-blue-300 transition-colors">Case Studies</Link> */}
           <Link href="#how-it-works" className="hover:text-blue-300 transition-colors">How It Works</Link>
           <Link href="/blog" className="hover:text-blue-300 transition-colors">Blog</Link>
           
