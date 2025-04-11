@@ -1,21 +1,18 @@
-'use client'
+'use client';
 /* eslint-disable @next/next/no-sync-scripts */
 import { BwFooter } from '@/components/BwFooter';
 import { BwNavbar } from '@/components/BwNavbar';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 export default function TxsPage() {
-  const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = "https://embed.typeform.com/next/embed.js";
-    script.async = true;
-    script.onload = () => setIsLoading(false);
-    document.body.appendChild(script);
+    const calendlyScript = document.createElement('script');
+    calendlyScript.src = 'https://assets.calendly.com/assets/external/widget.js';
+    calendlyScript.async = true;
+    document.body.appendChild(calendlyScript);
 
     return () => {
-      document.body.removeChild(script);
+      document.body.removeChild(calendlyScript);
     };
   }, []);
 
@@ -23,27 +20,30 @@ export default function TxsPage() {
     <div className="flex flex-col min-h-screen">
       <BwNavbar />
 
-      <main className="flex-grow flex items-center justify-center p-4">
-        <div className="w-full max-w-2xl">
-          <h1 className="text-2xl text-gray-800 font-semibold text-center mb-4">
-            Thank you for your interest!
-          </h1>
-          <p className="text-center text-gray-600 mb-6">
-            Please fill out the form below, and our team will reach out to you.
+      <main className="flex-grow flex flex-col items-center justify-center p-4">
+        <div className="w-full max-w-2xl text-center mb-6">
+           
+
+          {/* Custom Message */}
+          <p className="font-semibold text-lg text-gray-900 mb-2 uppercase tracking-wide">
+           COACHES  & COURSE SELLERS:
           </p>
-
-          {/* Show Loader Until Typeform Loads */}
-          {isLoading && (
-            <div className="flex justify-center">
-              <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-            </div>
-          )}
-
-          {/* Typeform Embed */}
-          <div className={`w-full ${isLoading ? 'hidden' : ''}`}>
-            <div data-tf-live="01JPB062ECQ1GAH7AQF61AA12S"></div>
-          </div>
+          {/* <p className="text-gray-700 mb-4">
+            Discover How We Can Guarantee You 52+ High-Ticket Clients In The Next 52 Weeks...
+          </p> */}
+          {/* <p className="font-medium text-sm text-gray-600 mb-6">
+            Step 1 of 2: Watch Video <br />
+            Step 2 of 2: Schedule Your Discovery Call <br /> */}<p className='text-gray-800'>
+            Your answers will remain completely confidential and are used to prepare a strategy for you prior to the call.
+          </p>
         </div>
+
+        {/* Calendly Inline Widget */}
+        <div
+          className="calendly-inline-widget w-full"
+          data-url="https://calendly.com/som_das/30min"
+          style={{ minWidth: '320px', height: '700px' }}
+        ></div>
       </main>
 
       <BwFooter />
