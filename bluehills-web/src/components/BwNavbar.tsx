@@ -27,9 +27,7 @@ export function BwNavbar() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {/* <Link href="#case-studies" className="text-gray-700 hover:text-black transition-colors">Case Studies</Link> */}
-          <Link href="#how-it-works" className="text-gray-700 hover:text-black transition-colors">How It Works</Link>
-          <Link href="/blog" className="text-gray-700 hover:text-black transition-colors">Blog</Link>
-         
+          
           {/* <Link href="https://twitter.com"   rel="noopener noreferrer" className="text-gray-700 hover:text-black transition-colors">
             <Twitter className="h-5 w-5" />
           </Link> */}
@@ -37,7 +35,7 @@ export function BwNavbar() {
             href="/sales"  
             className="bg-yellow-600 text-white px-4 py-2 rounded-md hover:bg-yellow-800 transition-colors animate-pulse"
           >
-            Contact sales
+         Let&apos;s Talk
           </Link>
         </nav>
         
@@ -47,7 +45,7 @@ export function BwNavbar() {
             href="/sales"  
             className="bg-yellow-600 text-white px-4 py-2  rounded-md hover:bg-yellow-800  transition-colors animate-pulse text-sm"
           >
-            Contact sales
+               Let&apos;s Talk
             </Link>
           <button 
             className="text-black"
@@ -75,9 +73,7 @@ export function BwNavbar() {
       {isMobileMenuOpen && (
         <nav className="md:hidden bg-white px-4 py-4 flex flex-col space-y-4">
           <Link href="#case-studies" className="text-black hover:text-gray-700 transition-colors">Case Studies</Link>
-          <Link href="#how-it-works" className="text-black hover:text-gray-700 transition-colors">How It Works</Link>
-          <Link href="/blog" className="text-black hover:text-gray-700 transition-colors">Blog</Link>
-       
+        
           {/* <Link 
             href="https://twitter.com" 
             target="_blank" 

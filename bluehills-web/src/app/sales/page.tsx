@@ -1,5 +1,4 @@
 'use client';
-/* eslint-disable @next/next/no-sync-scripts */
 import { BwFooter } from '@/components/BwFooter';
 import { BwNavbar } from '@/components/BwNavbar';
 import React, { useEffect } from 'react';
@@ -50,3 +49,7 @@ export default function TxsPage() {
     </div>
   );
 }
+  
+
+
+

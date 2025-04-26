@@ -16,7 +16,6 @@ type BlogSectionProps = {
 };
 
 export default function BlogSection({ posts }: BlogSectionProps) {
-  // Create a fixed date formatter to ensure consistency
   const dateFormatter = new Intl.DateTimeFormat('en-US', {
     weekday: 'long',
     year: 'numeric',
@@ -25,35 +24,38 @@ export default function BlogSection({ posts }: BlogSectionProps) {
   });
 
   return (
-    <section id="blog" className="py-20 px-4 bg-blue-800/50">
+    <section id="blog" className="py-20 px-4 bg-white text-gray-900">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Latest Insights</h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-6xl font-extrabold mb-6 text-gray-800">
+            Latest Insights
+          </h2>
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
             Stay updated with the latest trends and insights in AI automation.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {posts.map((post) => {
-            // Format the date string in a consistent way
             const formattedDate = dateFormatter.format(new Date(post.publishedAt));
-            
             return (
               <BlogCard
                 key={post._id}
                 title={post.title}
                 date={formattedDate}
                 image={post.image ?? null}
-                slug={post.slug.current} // Pass the slug correctly
+                slug={post.slug.current}
               />
             );
           })}
         </div>
 
-        <div className="text-center mt-12">
-          <Link href="/blog" className="border border-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors inline-flex items-center justify-center">
-            <p>View All Articles</p>
+        <div className="text-center mt-16">
+          <Link 
+            href="/blog" 
+            className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300"
+          >
+            View All Articles
           </Link>
         </div>
       </div>
