@@ -24,9 +24,7 @@ export default function TxsPage() {
            
 
           {/* Custom Message */}
-          <p className="font-semibold text-lg text-gray-900 mb-2 uppercase tracking-wide">
-           COACHES  & COURSE SELLERS:
-          </p>
+         
           {/* <p className="text-gray-700 mb-4">
             Discover How We Can Guarantee You 52+ High-Ticket Clients In The Next 52 Weeks...
           </p> */}
