@@ -77,15 +77,7 @@ export default async function Home() {
     background: 'linear-gradient(to bottom right, #3735e4, #17143d)',
   }}
 >
-<Script
-        type="module"
-        src="https://agent.d-id.com/v1/index.js"
-        data-name="did-agent"
-        data-mode="fabio"
-        data-client-key="Z29vZ2xlLW9hdXRoMnwxMDUxNDg0NDM0NzE3NDM2NzcxNDc6cDZha1J2cE5jY3B0dXNJVnBrNnk4"
-        data-agent-id="agt_oslHH7xS"
-        data-monitor="true"
-      />
+ 
 
 
 {/* Header/Navigation */}
