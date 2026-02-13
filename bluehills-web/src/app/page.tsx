@@ -110,7 +110,7 @@ export default async function Home() {
     color: 'transparent',
   }}
 >
-  GROWTH SYSTEMS <br className="hidden md:inline" /> FOR ONLINE BIZ
+SaaS DEMO VIDEOS <br className="hidden md:inline" /> FOR AI COMPANIES
 </h1>
 
 

@@ -13,11 +13,11 @@ export function Footer() {
             <div>
               <div className="flex items-center space-x-2 mb-6">
                 <span className="text-2xl font-bold bg-gradient-to-r from-blue-200 to-white bg-clip-text text-transparent">
-                  Bluehills AI
+                  Bluehill Media
                 </span>
               </div>
               <p className="text-blue-200 mb-6">
-                Transforming businesses through intelligent automation solutions.
+                Transforming AI SaaS products through high-impact demo and walkthrough videos.
               </p>
               <div className="flex space-x-4">
               <Link href="https://instagram.com/bluehillsai" className="text-blue-300 hover:text-white transition-colors">
@@ -52,11 +52,11 @@ export function Footer() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Our Solutions</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="text-blue-200 hover:text-white transition-colors">AI Automation</a></li>
-                <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Workflow Optimization</a></li>
-                <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Intelligent Chatbots</a></li>
-                <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Predictive Analytics</a></li>
-                <li><a href="#" className="text-blue-200 hover:text-white transition-colors">Custom AI Solutions</a></li>
+              <li><a href="#" className="text-blue-200 hover:text-white transition-colors">AI SaaS Product Demo Videos</a></li>
+<li><a href="#" className="text-blue-200 hover:text-white transition-colors">Feature Walkthrough & UI Explainers</a></li>
+<li><a href="#" className="text-blue-200 hover:text-white transition-colors">Onboarding & Activation Videos</a></li>
+<li><a href="#" className="text-blue-200 hover:text-white transition-colors">Release & Update Demo Videos</a></li>
+<li><a href="#" className="text-blue-200 hover:text-white transition-colors">Sales & Website Demo Videos</a></li>
               </ul>
             </div>
 
@@ -89,7 +89,7 @@ export function Footer() {
           {/* Footer Bottom */}
           <div className="border-t border-blue-800 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-blue-300 mb-4 md:mb-0">
-              &copy; {new Date().getFullYear()} Bluehills AI. All rights reserved.
+              &copy; {new Date().getFullYear()} Bluehill Media. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link href="#" className="text-blue-300 hover:text-white transition-colors text-sm">Privacy Policy</Link>

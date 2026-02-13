@@ -31,7 +31,9 @@ export default function BlogSection({ posts }: BlogSectionProps) {
             Latest Insights
           </h2>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-            Stay updated with the latest trends and insights in AI automation.
+          Stay updated with the latest trends and insights in AI automation.
+
+
           </p>
         </div>
 

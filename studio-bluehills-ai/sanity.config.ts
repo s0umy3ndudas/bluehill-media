@@ -5,7 +5,7 @@ import {schemaTypes} from './schemaTypes'
 
 export default defineConfig({
   name: 'default',
-  title: 'Bluehills AI',
+  title: 'Bluehill Media',
 
   projectId: 'dzfk03mz',
   dataset: 'production',

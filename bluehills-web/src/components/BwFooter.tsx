@@ -12,10 +12,10 @@ export function BwFooter() {
             {/* Branding & Socials */}
             <div>
               <div className="flex items-center space-x-2 mb-6">
-                <span className="text-2xl font-bold">Bluehills AI</span>
+                <span className="text-2xl font-bold">Bluehill Media</span>
               </div>
               <p className="mb-6">
-                Transforming businesses through intelligent automation solutions.
+                Transforming AI SaaS products through high-impact demo and walkthrough videos.
               </p>
               <div className="flex space-x-4">
               <Link href="https://instagram.com/bluehillsai" className="  hover:text-gray-400 transition-colors">
@@ -50,11 +50,11 @@ export function BwFooter() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Our Solutions</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="hover:text-gray-700 transition-colors">AI Automation</a></li>
-                <li><a href="#" className="hover:text-gray-700 transition-colors">Workflow Optimization</a></li>
-                <li><a href="#" className="hover:text-gray-700 transition-colors">Intelligent Chatbots</a></li>
-                <li><a href="#" className="hover:text-gray-700 transition-colors">Predictive Analytics</a></li>
-                <li><a href="#" className="hover:text-gray-700 transition-colors">Custom AI Solutions</a></li>
+              <li><a href="#" className="hover:text-gray-700 transition-colors">AI SaaS Product Demo Videos</a></li>
+<li><a href="#" className="hover:text-gray-700 transition-colors">Feature Walkthrough & UI Explainers</a></li>
+<li><a href="#" className="hover:text-gray-700 transition-colors">Onboarding & Activation Videos</a></li>
+<li><a href="#" className="hover:text-gray-700 transition-colors">Release & Update Demo Videos</a></li>
+<li><a href="#" className="hover:text-gray-700 transition-colors">Sales & Website Demo Videos</a></li>
               </ul>
             </div>
 
@@ -86,7 +86,7 @@ export function BwFooter() {
           {/* Footer Bottom */}
           <div className="border-t border-gray-300 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="mb-4 md:mb-0">
-              &copy; {new Date().getFullYear()} Bluehills AI. All rights reserved.
+              &copy; {new Date().getFullYear()} Bluehill Media. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link href="#" className="hover:text-gray-700 transition-colors text-sm">Privacy Policy</Link>

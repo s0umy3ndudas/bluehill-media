@@ -5,7 +5,7 @@ import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const messages = [
-  "Hi this is Som, Welcome to Bluehills AI",
+  "Hi this is Som, Welcome to Bluehill Media",
   "How can I help you today?",
   "Are you finding anything?",
   "Ask me anything",

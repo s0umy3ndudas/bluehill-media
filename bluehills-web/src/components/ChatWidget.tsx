@@ -20,8 +20,8 @@ const ChatWidget = () => {
 
     const handleQuestionClick = (question: string) => {
         let response = "";
-        if (question === "What is Bluehills AI?") {
-            response = "Bluehills AI is an advanced AI-powered business assistant.";
+        if (question === "What is Bluehill Media?") {
+            response = "Bluehill Media is an advanced AI-powered business assistant.";
         } else if (question === "Can I book a call?") {
             response = "Sure! Please provide your Name, Email, and Phone Number.";
             setShowInput(true);
@@ -66,12 +66,12 @@ const ChatWidget = () => {
             {/* Chat Box */}
             {isOpen && (
                 <div className="w-80 bg-white shadow-lg rounded-lg p-4 mt-2 border">
-                    <div className="font-bold text-lg text-center bg-blue-600 text-white py-2 rounded-t-lg">Bluehills AI</div>
+                    <div className="font-bold text-lg text-center bg-blue-600 text-white py-2 rounded-t-lg">Bluehill Media</div>
 
                     {/* Predefined Questions */}
                     {messages.length === 0 && (
                         <div className="flex flex-col gap-2 mt-3">
-                            {["What is Bluehills AI?", "Can I book a call?", "How much does it cost?"].map((q) => (
+                            {["What is Bluehill Media?", "Can I book a call?", "How much does it cost?"].map((q) => (
                                 <button key={q} onClick={() => handleQuestionClick(q)} className="bg-blue-500 text-white px-3 py-2 rounded-md hover:bg-blue-700">
                                     {q}
                                 </button>
