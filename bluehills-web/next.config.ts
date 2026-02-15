@@ -8,10 +8,7 @@ const nextConfig = withMDX({
   images: {
     domains: ['images.unsplash.com', 'res.cloudinary.com', 'source.unsplash.com', 'cdn.sanity.io',  'bluehillsai.com' ], // Allowed external images
   },
-  experimental: {
-    turbo: {}, // ✅ Correct Turbo Mode Configuration
-    serverActions: true, // ✅ Enables experimental server actions
-  },
+ 
   webpack: (config: { module: { rules: { test: RegExp; use: string[]; }[]; }; }) => {
     config.module.rules.push({
       test: /\.svg$/,
@@ -22,10 +19,7 @@ const nextConfig = withMDX({
   env: {
     NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL, // Expose env variable
   },
-  i18n: {
-    locales: ['en'], // ✅ Add more languages as needed
-    defaultLocale: 'en',
-  },
+ 
   productionBrowserSourceMaps: true, // ✅ Enables source maps in production for better debugging
   pageExtensions: ['tsx', 'mdx'], // ✅ Allows both TSX & MDX pages
 });
