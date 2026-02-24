@@ -16,16 +16,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bluehill Media - AI Solutions",
-  description: "Bluehill Media provides cutting-edge AI solutions for businesses.",
+  title: "Bluehill Media - SaaS Explainer & Product Demo Specialists",
+  description: "Bluehill Media provides high-impact SaaS demo, AI marketing, and product explainer video solutions for modern tech businesses.",
   openGraph: {
-    title: "Bluehill Media - AI Solutions",
-    description: "Bluehill Media provides cutting-edge AI solutions for businesses.",
-    url: "https://bluehillsai.com",
+    title: "Bluehill Media - SaaS Explainer & Product Demo Specialists",
+    description: "Bluehill Media provides high-impact SaaS demo, AI marketing, and product explainer video solutions for modern tech businesses.",
+    url: "https://bluehill.media",
     siteName: "Bluehill Media",
     images: [
       {
-        url: "https://bluehillsai.com/og-image.jpg",
+        url: "https://bluehill.media/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Bluehill Media",

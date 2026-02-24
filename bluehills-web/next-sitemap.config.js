@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://bluehillsai.com",
+  siteUrl: "https://bluehill.media",
   generateRobotsTxt: true, // Generate robots.txt file
   exclude: ["/admin", "/dashboard"], // Exclude private pages
   transform: async (config, path) => {

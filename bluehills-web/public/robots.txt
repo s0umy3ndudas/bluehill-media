@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://bluehillsai.com
+Host: https://bluehill.media
 
 # Sitemaps
-Sitemap: https://bluehillsai.com/sitemap.xml
+Sitemap: https://bluehill.media/sitemap.xml

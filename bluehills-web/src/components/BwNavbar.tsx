@@ -13,7 +13,7 @@ export function BwNavbar() {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <span className="text-2xl font-bold bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent">
-          <Link href="https://bluehillsai.com"  rel="noopener noreferrer" className="text-gray-700 hover:text-black transition-colors">
+          <Link href="https://bluehill.media"  rel="noopener noreferrer" className="text-gray-700 hover:text-black transition-colors">
           <Image 
               src='https://res.cloudinary.com/dsccaob3y/image/upload/v1743604928/brand/rx79b0grt9v1qc7yadxh.png' 
               height={100} 

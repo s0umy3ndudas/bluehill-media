@@ -13,7 +13,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <Link href="https://bluehillsai.com" rel="noopener noreferrer">
+          <Link href="https://bluehill.media" rel="noopener noreferrer">
             <Image 
               src='https://res.cloudinary.com/dsccaob3y/image/upload/v1743604755/brand/d7gcctsyl75pughx0ahh.png' 
               height={100} 
